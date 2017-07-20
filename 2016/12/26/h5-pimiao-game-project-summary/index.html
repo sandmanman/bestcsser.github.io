@@ -66,7 +66,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="HTML5,CSS3,前端开发,javascript,ES6" />
+  <meta name="keywords" content="HTML5,CSS3,javascript,ES6,Vue" />
 
 
 
@@ -88,11 +88,11 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="H5皮秒游戏总结">
 <meta property="og:url" content="http://www.bestcsser.cc/2016/12/26/h5-pimiao-game-project-summary/index.html">
-<meta property="og:site_name" content="< Code-Design-Coffee />">
+<meta property="og:site_name" content="Code.Design.Coffee">
 <meta property="og:description" content="写在前面前段时间公司接的一个小项目，开发在微信上传播的小游戏。
 游戏的流程就是提供三种瑕疵的美女图片斑点、皱纹、纹身，需要用户点击来擦除斑点、皱纹、纹身，并计时统计总的擦除用时，来进行排名。
 接到项目的具体需求，心里想到的就是我们经常见到的刮刮乐，刮开图层显示中奖信息，这个原理跟要开发的小游戏基本一致，及擦除掉有斑点皱纹纹身的图层显示完美的一层即可。虽然这种效果经常遇见，具体的代码实现没有去看过。">
-<meta property="og:updated_time" content="2016-12-27T14:46:50.000Z">
+<meta property="og:updated_time" content="2017-02-05T06:37:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="H5皮秒游戏总结">
 <meta name="twitter:description" content="写在前面前段时间公司接的一个小项目，开发在微信上传播的小游戏。
@@ -131,7 +131,7 @@
 
 
 
-  <title> H5皮秒游戏总结 | < Code-Design-Coffee /> </title>
+  <title> H5皮秒游戏总结 | Code.Design.Coffee </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -161,7 +161,7 @@
     <div class="site-meta-headline">
       <a>
         <img class="custom-logo-image" src="/uploads/logo.png"
-             alt="< Code-Design-Coffee />"/>
+             alt="Code.Design.Coffee"/>
       </a>
     </div>
   
@@ -169,7 +169,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">< Code-Design-Coffee /></span>
+      <span class="site-title">Code.Design.Coffee</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -262,15 +262,15 @@
   <link itemprop="mainEntityOfPage" href="http://www.bestcsser.cc/2016/12/26/h5-pimiao-game-project-summary/">
 
   <span style="display:none" itemprop="author" itemscope itemtype="http://schema.org/Person">
-    <meta itemprop="name" content="Sandman">
+    <meta itemprop="name" content="Qiming">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="/uploads/avatar.png">
   </span>
 
   <span style="display:none" itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-    <meta itemprop="name" content="< Code-Design-Coffee />">
+    <meta itemprop="name" content="Code.Design.Coffee">
     <span style="display:none" itemprop="logo" itemscope itemtype="http://schema.org/ImageObject">
-      <img style="display:none;" itemprop="url image" alt="< Code-Design-Coffee />" src="/uploads/logo.png">
+      <img style="display:none;" itemprop="url image" alt="Code.Design.Coffee" src="/uploads/logo.png">
     </span>
   </span>
 
@@ -374,6 +374,11 @@
 <p>关于自动播放，在iPhone7的微信浏览器中是不自动播放的，于是又去查到这个 <a href="http://webexp.cn/dlsd2016.html" target="_blank" rel="external">轻松化解iOS系统及微信中不支持audio自动播放问题</a>，根据这个方法，自动播放的问题解决了。</p>
 <p>关于音乐持续播放的问题，因为跨页面了，貌似让一首音乐持续接着播放好像不容易实现，去看了下API， <code>currentTime</code> 设置或返回音频中的当前播放位置（以秒计）。我想法是在跳转也时候把 currentTime 的值通过 URL 传到下一页去，在下一页中去指定 <code>audio</code> 的 <code>currentTime</code>。在我去查这个问题的时候，好像没有看到关于 <code>currentTime</code> 的思路，想想也是，如果跳转挺多页的话岂不是要玩儿死，所以这个思路肯定是行不通的。</p>
 <p>有空我要先Demo下 <code>currentTime</code> 是个什么情况，及一些网易云音乐Web版是怎么做的。</p>
+<h3 id="CSS3动画性能"><a href="#CSS3动画性能" class="headerlink" title="CSS3动画性能"></a>CSS3动画性能</h3><p>发现使用 <code>box-shadow</code> 来做闪烁的效果，几个同时闪烁，会有明显的卡顿现象（小米4C），如果 用边缘羽化过的图片 来替换box-shadow的话，卡顿现象消失了。<br>这里有两篇关于CSS3动画性能的文章：</p>
+<ul>
+<li><a href="https://www.qianduan.net/high-performance-css3-animations/" target="_blank" rel="external">高性能 CSS3 动画</a></li>
+<li><a href="https://www.w3cplus.com/css3/introduction-to-hardware-acceleration-css-animations.html" target="_blank" rel="external">CSS动画之硬件加速</a></li>
+</ul>
 <h3 id="还可以更好的地方"><a href="#还可以更好的地方" class="headerlink" title="还可以更好的地方"></a>还可以更好的地方</h3><ul>
 <li>图片资源的预加载</li>
 <li>音频资源的预加载</li>
@@ -414,8 +419,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/12/07/javascript-note/" rel="next" title="javaScript Evernote">
-                <i class="fa fa-chevron-left"></i> javaScript Evernote
+              <a href="/2016/12/06/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
           </div>
@@ -423,6 +428,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/17/html5-audio-across-pages-continues-play/" rel="prev" title="HTML5 audio 跨页面持续播放">
+                HTML5 audio 跨页面持续播放 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -483,14 +492,14 @@
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/uploads/avatar.png"
-               alt="Sandman" />
-          <p class="site-author-name" itemprop="name">Sandman</p>
+               alt="Qiming" />
+          <p class="site-author-name" itemprop="name">Qiming</p>
           <p class="site-description motion-element" itemprop="description"></p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -498,7 +507,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -507,7 +516,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">1</span>
+                <span class="site-state-item-count">7</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -542,7 +551,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还可以更好的地方"><span class="nav-number">4.</span> <span class="nav-text">还可以更好的地方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#吐槽"><span class="nav-number">5.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#写在前面"><span class="nav-number">1.</span> <span class="nav-text">写在前面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#过程"><span class="nav-number">2.</span> <span class="nav-text">过程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#遇到的问题"><span class="nav-number">3.</span> <span class="nav-text">遇到的问题</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#CSS3动画性能"><span class="nav-number">4.</span> <span class="nav-text">CSS3动画性能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#还可以更好的地方"><span class="nav-number">5.</span> <span class="nav-text">还可以更好的地方</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#吐槽"><span class="nav-number">6.</span> <span class="nav-text">吐槽</span></a></li></ol></div>
             
 
           </div>
@@ -563,8 +572,8 @@
         <div class="copyright" >
   
   &copy; 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="author" itemprop="copyrightHolder">Sandman</span>
+  <span itemprop="copyrightYear">2017</span>
+  <span class="author" itemprop="copyrightHolder">Qiming</span>
 </div>
 
 
